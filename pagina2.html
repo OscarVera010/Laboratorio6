@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 2 - GitHub y Trabajo Colaborativo | Laboratorio 6</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!-- Menú de navegación (Página 2 activa) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-info" href="index.html">
+                Lab 6: Git &amp; Web
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio (index)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pagina1.html">pagina 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fw-semibold" aria-current="page" href="pagina2.html">pagina 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pagina3.html">pagina 3</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado -->
+    <header class="page-header-p2 py-5 text-white">
+        <div class="container">
+            <span class="badge bg-warning text-dark mb-2 px-3 py-2">Estás en: Página 2</span>
+            <h1 class="display-4 fw-bold">Repositorios Remotos y Colaboración en GitHub</h1>
+            <p class="lead mb-0">Sincronización en la nube, ramas de desarrollo y trabajo en equipo.</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <!-- 3 Párrafos explicativos requeridos -->
+        <section class="my-4 bg-white p-4 rounded-4 shadow-sm">
+            <h2 class="h3 fw-bold text-primary mb-3">Sincronización entre Git Local y GitHub</h2>
+            <p class="fs-5 text-secondary">
+                <strong>Párrafo 1:</strong> Mientras que Git es la herramienta de control de versiones que se ejecuta localmente en nuestra computadora, <strong>GitHub</strong> es una plataforma en la nube que aloja repositorios de Git de manera remota. Esto permite que múltiples programadores compartan un mismo proyecto, respalden su código en servidores seguros y colaboren desde cualquier parte del mundo sin enviar carpetas comprimidas manualmente.
+            </p>
+            <p class="fs-5 text-secondary">
+                <strong>Párrafo 2:</strong> Para comenzar a trabajar con un repositorio alojado en GitHub se utiliza el comando <code>git clone &lt;URL&gt;</code>, el cual descarga no solo los archivos actuales del proyecto sino toda su estructura de control de versiones (<code>.git</code>) y la vinculación automática con el servidor remoto llamado por defecto <code>origin</code>. Es fundamental clonar el repositorio en lugar de descargarlo como archivo ZIP, ya que el archivo ZIP pierde el historial y el seguimiento de versiones.
+            </p>
+            <p class="fs-5 text-secondary mb-0">
+                <strong>Párrafo 3:</strong> Una vez que hemos registrado commits en nuestra máquina local, empleamos <code>git push</code> para enviar nuestras confirmaciones hacia la rama principal (<code>main</code>) en GitHub. Asimismo, cuando agregamos colaboradores en la sección <em>Settings &rarr; Collaborators</em> de nuestro repositorio, nuestros compañeros pueden clonar el proyecto, incorporar mejoras o archivos nuevos, y subir sus propios commits compartiendo un flujo de desarrollo transparente y ordenado.
+            </p>
+        </section>
+
+        <!-- Componente Bootstrap #1: Carousel con las 3 imágenes requeridas -->
+        <section class="my-5">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="h3 fw-bold mb-0">Galería Interactiva: Flujo de Trabajo en GitHub</h2>
+                <span class="badge bg-primary">Componente Bootstrap: Carousel</span>
+            </div>
+            <div id="carruselGitHub" class="carousel slide shadow-lg rounded-4 overflow-hidden" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carruselGitHub" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carruselGitHub" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carruselGitHub" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/p2_branches.png" class="d-block w-100" alt="Ramas en Git">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/p2_github_cloud.png" class="d-block w-100" alt="Sincronización con GitHub">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/p2_pull_request.png" class="d-block w-100" alt="Colaboración en Equipo">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carruselGitHub" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carruselGitHub" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Vista adicional en miniatura de las 3 imágenes para visualización simultánea -->
+        <section class="my-4">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <img src="img/p2_branches.png" alt="Ramas en Git" class="img-fluid rounded-3 shadow-sm">
+                </div>
+                <div class="col-md-4">
+                    <img src="img/p2_github_cloud.png" alt="Repositorios en la nube" class="img-fluid rounded-3 shadow-sm">
+                </div>
+                <div class="col-md-4">
+                    <img src="img/p2_pull_request.png" alt="Trabajo colaborativo" class="img-fluid rounded-3 shadow-sm">
+                </div>
+            </div>
+        </section>
+
+        <!-- Componente Bootstrap #2 y #3: Progress Bars + Tabla comparativa -->
+        <div class="row g-4 my-4">
+            <div class="col-lg-6">
+                <div class="bg-white p-4 rounded-4 shadow-sm h-100">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h3 class="h4 fw-bold mb-0">Adopción en la Industria</h3>
+                        <span class="badge bg-success">Componente Bootstrap: Progress</span>
+                    </div>
+                    <p class="text-secondary small">Porcentaje de uso de herramientas de control de versiones y colaboración en equipos de desarrollo web:</p>
+                    
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="fw-semibold">Git (Control de Versiones)</span>
+                            <span class="fw-bold text-primary">96%</span>
+                        </div>
+                        <div class="progress" style="height: 20px;">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" style="width: 96%;">96%</div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="fw-semibold">GitHub (Plataforma Remota)</span>
+                            <span class="fw-bold text-info">89%</span>
+                        </div>
+                        <div class="progress" style="height: 20px;">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-info text-dark" role="progressbar" style="width: 89%;">89%</div>
+                        </div>
+                    </div>
+
+                    <div class="mb-0">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="fw-semibold">Flujo Colaborativo con Ramas / PRs</span>
+                            <span class="fw-bold text-success">85%</span>
+                        </div>
+                        <div class="progress" style="height: 20px;">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 85%;">85%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="bg-white p-4 rounded-4 shadow-sm h-100">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h3 class="h4 fw-bold mb-0">Comandos de Red en Git</h3>
+                        <span class="badge bg-dark">Componente Bootstrap: Table</span>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-bordered align-middle mb-0">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Comando</th>
+                                    <th>Función Principal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>git clone &lt;url&gt;</code></td>
+                                    <td>Descarga una copia completa de un repositorio remoto de GitHub.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>git push</code></td>
+                                    <td>Envía los commits locales hacia el repositorio remoto en GitHub.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>git pull</code></td>
+                                    <td>Descarga y fusiona los cambios realizados por otros colaboradores.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>git remote -v</code></td>
+                                    <td>Muestra las URLs asociadas al servidor remoto configurado.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-1 fw-semibold">Laboratorio 6 - Página 2 | Curso de Programación Web - FIME UANL</p>
+            <p class="mb-0 text-secondary small">Matrícula: 2160859 | Grupo: 207 | Docente: Ing. Luis Daniel Lepe Rodríguez</p>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

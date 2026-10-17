@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 1 - Fundamentos de Git | Laboratorio 6</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!-- Menú de navegación (Página 1 activa) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-info" href="index.html">
+                Lab 6: Git &amp; Web
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio (index)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fw-semibold" aria-current="page" href="pagina1.html">pagina 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pagina2.html">pagina 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pagina3.html">pagina 3</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado -->
+    <header class="page-header-p1 py-5 text-white">
+        <div class="container">
+            <span class="badge bg-success mb-2 px-3 py-2">Estás en: Página 1</span>
+            <h1 class="display-4 fw-bold">Fundamentos del Control de Versiones con Git</h1>
+            <p class="lead mb-0">Comprendiendo los estados de los archivos y el flujo local de trabajo en Git.</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <!-- Componente Bootstrap #1: Alert con insignia -->
+        <div class="alert alert-info border-start border-4 border-info shadow-sm d-flex align-items-center justify-content-between flex-wrap" role="alert">
+            <div>
+                <strong>Concepto clave:</strong> Git registra instantáneas completas (snapshots) de tu proyecto a lo largo del tiempo en lugar de simples diferencias de archivos.
+            </div>
+            <span class="badge bg-dark mt-2 mt-md-0">Componente Bootstrap: Alert + Badge</span>
+        </div>
+
+        <!-- 3 Párrafos explicativos requeridos -->
+        <section class="my-4 bg-white p-4 rounded-4 shadow-sm">
+            <h2 class="h3 fw-bold text-primary mb-3">¿Cómo funciona Git internamente?</h2>
+            <p class="fs-5 text-secondary">
+                <strong>Párrafo 1:</strong> Git es un sistema de control de versiones distribuido (DVCS) diseñado por Linus Torvalds para gestionar proyectos de software con rapidez, seguridad y eficiencia. A diferencia de los sistemas centralizados antiguos, cada desarrollador que clona un repositorio dispone de una copia íntegra de todo el historial de cambios en su propia computadora, permitiendo trabajar sin conexión a internet y garantizando un respaldo completo ante cualquier eventualidad en el servidor central.
+            </p>
+            <p class="fs-5 text-secondary">
+                <strong>Párrafo 2:</strong> Dentro de un repositorio local de Git existen tres áreas fundamentales por las que transitan nuestros archivos: el <em>Directorio de Trabajo (Working Directory)</em>, donde creamos y modificamos archivos HTML, CSS o JavaScript; el <em>Área de Preparación (Staging Area o Index)</em>, a la cual enviamos los archivos mediante el comando <code>git add -A</code> para seleccionar qué cambios formarán parte de la siguiente versión; y el <em>Repositorio Local (.git)</em>, donde se almacenan permanentemente las confirmaciones.
+            </p>
+            <p class="fs-5 text-secondary mb-0">
+                <strong>Párrafo 3:</strong> Cuando ejecutamos el comando <code>git commit -m "mensaje"</code>, Git toma todos los archivos presentes en el área de preparación y genera una instantánea inmutable identificada por un código criptográfico único (hash SHA-1 de 40 caracteres), junto con el nombre del autor, correo electrónico, fecha exacta y mensaje descriptivo. De esta manera podemos auditar el historial con <code>git log</code> o regresar a cualquier estado previo del proyecto en segundos.
+            </p>
+        </section>
+
+        <!-- 3 Imágenes dentro de Componente Bootstrap #2: Cards (Tarjetas) -->
+        <section class="my-5">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="h3 fw-bold mb-0">Las 3 Etapas del Flujo Local en Git</h2>
+                <span class="badge bg-primary">Componente Bootstrap: Cards Grid</span>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0 card-hover">
+                        <img src="img/p1_git_init.png" class="card-img-top" alt="Working Directory en Git">
+                        <div class="card-body">
+                            <span class="badge bg-danger mb-2">Estado: Untracked / Modified</span>
+                            <h3 class="h5 card-title fw-bold">1. Directorio de Trabajo</h3>
+                            <p class="card-text text-secondary">Aquí editas tus archivos como <code>index.html</code>. Al ejecutar <code>git status</code>, los archivos nuevos o modificados aparecen resaltados en color rojo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0 card-hover">
+                        <img src="img/p1_staging.png" class="card-img-top" alt="Staging Area con git add">
+                        <div class="card-body">
+                            <span class="badge bg-success mb-2">Estado: Staged</span>
+                            <h3 class="h5 card-title fw-bold">2. Área de Preparación</h3>
+                            <p class="card-text text-secondary">Al usar <code>git add -A</code>, tus archivos pasan al Staging Area y se muestran en color verde al verificar con <code>git status</code>.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0 card-hover">
+                        <img src="img/p1_commits.png" class="card-img-top" alt="Historial de Commits con git commit">
+                        <div class="card-body">
+                            <span class="badge bg-info text-dark mb-2">Estado: Committed</span>
+                            <h3 class="h5 card-title fw-bold">3. Repositorio Local (.git)</h3>
+                            <p class="card-text text-secondary">Con <code>git commit -m "..."</code> se guarda el cambio de forma definitiva en el historial local, consultable mediante <code>git log</code>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Componente Bootstrap #3: Accordion interactivo -->
+        <section class="my-5">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="h3 fw-bold mb-0">Glosario Interactivo de Comandos Locales</h2>
+                <span class="badge bg-secondary">Componente Bootstrap: Accordion</span>
+            </div>
+            <div class="accordion shadow-sm" id="acordeonGit">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Comando: git status
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#acordeonGit">
+                        <div class="accordion-body">
+                            Muestra el estado actual del árbol de trabajo y del área de preparación (Staging Area). Permite identificar qué archivos han sido modificados, cuáles están listos para ser confirmados y cuáles aún no están siendo rastreados por Git (<em>Untracked files</em>).
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Comando: git add -A
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#acordeonGit">
+                        <div class="accordion-body">
+                            Agrega todos los archivos nuevos, modificados y eliminados en todo el repositorio hacia el área de preparación (Staging Area). El parámetro <code>-A</code> (o <code>--all</code>) asegura que ningún archivo quede fuera de la preparación.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Comandos: git commit -m y git log
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#acordeonGit">
+                        <div class="accordion-body">
+                            <code>git commit -m "mensaje"</code> registra los cambios preparados en el repositorio con una descripción clara, mientras que <code>git log</code> lista en orden cronológico inverso todos los commits realizados junto con su autor, fecha y código identificador.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-1 fw-semibold">Laboratorio 6 - Página 1 | Curso de Programación Web - FIME UANL</p>
+            <p class="mb-0 text-secondary small">Matrícula: 2160859 | Grupo: 207 | Docente: Ing. Luis Daniel Lepe Rodríguez</p>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

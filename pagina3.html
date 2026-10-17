@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 3 - Desarrollo Web con Bootstrap 5 | Laboratorio 6</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!-- Menú de navegación (Página 3 activa) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-info" href="index.html">
+                Lab 6: Git &amp; Web
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio (index)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pagina1.html">pagina 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pagina2.html">pagina 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fw-semibold" aria-current="page" href="pagina3.html">pagina 3</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado -->
+    <header class="page-header-p3 py-5 text-white">
+        <div class="container">
+            <span class="badge bg-info text-dark mb-2 px-3 py-2">Estás en: Página 3</span>
+            <h1 class="display-4 fw-bold">Desarrollo Web con HTML5, CSS3 y Bootstrap 5</h1>
+            <p class="lead mb-0">Integración de interfaces responsivas y control de versiones en proyectos web.</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <!-- 3 Párrafos explicativos requeridos -->
+        <section class="my-4 bg-white p-4 rounded-4 shadow-sm">
+            <h2 class="h3 fw-bold text-success mb-3">Arquitectura Frontend y Control de Versiones</h2>
+            <p class="fs-5 text-secondary">
+                <strong>Párrafo 1:</strong> En el desarrollo web contemporáneo, la combinación de <strong>HTML5 semántico</strong>, hojas de estilo <strong>CSS3</strong> y el framework <strong>Bootstrap 5</strong> permite construir interfaces adaptables (<em>Responsive Web Design</em>) que se visualizan correctamente tanto en teléfonos móviles como en monitores de escritorio. El sistema de rejilla (<em>Grid System</em>) de 12 columnas facilita organizar contenedores, filas y tarjetas con precisión.
+            </p>
+            <p class="fs-5 text-secondary">
+                <strong>Párrafo 2:</strong> Al desarrollar sitios compuestos por múltiples páginas (como <code>index.html</code>, <code>pagina1.html</code>, <code>pagina2.html</code> y <code>pagina3.html</code>), mantener un menú de navegación consistente (<code>.navbar</code>) con la clase <code>.active</code> en el enlace actual mejora significativamente la experiencia del usuario (UX), ya que le indica en todo momento en qué sección del sitio se encuentra.
+            </p>
+            <p class="fs-5 text-secondary mb-0">
+                <strong>Párrafo 3:</strong> Integrar Git desde el inicio de un proyecto frontend evita la pérdida accidental de estilos o scripts cuando se experimenta con nuevos componentes visuales. Cada vez que se completa una funcionalidad —como agregar nuevas páginas o integrar un modal interactivo—, se realiza un <code>git commit</code> atómico y descriptivo, manteniendo un historial limpio y profesional listo para desplegarse en servicios como GitHub Pages.
+            </p>
+        </section>
+
+        <!-- 3 Imágenes requeridas dentro de Componente Bootstrap #1: Cards -->
+        <section class="my-5">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="h3 fw-bold mb-0">Tecnologías Aplicadas en este Laboratorio</h2>
+                <span class="badge bg-success">Componente Bootstrap: Cards</span>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0 card-hover">
+                        <img src="img/p3_html5_css3.png" class="card-img-top" alt="Estructura HTML5 y CSS3">
+                        <div class="card-body">
+                            <h3 class="h5 card-title fw-bold">Maquetación Semántica</h3>
+                            <p class="card-text text-secondary">Uso de etiquetas estructurales como <code>&lt;nav&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code> y <code>&lt;footer&gt;</code> para un código limpio y accesible.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0 card-hover">
+                        <img src="img/p3_bootstrap5.png" class="card-img-top" alt="Componentes de Bootstrap 5">
+                        <div class="card-body">
+                            <h3 class="h5 card-title fw-bold">Componentes Interactivos</h3>
+                            <p class="card-text text-secondary">Implementación de barras de navegación responsivas, tarjetas, acordeones, carruseles, barras de progreso y ventanas modales.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0 card-hover">
+                        <img src="img/p3_deploy_web.png" class="card-img-top" alt="Despliegue Web con Git">
+                        <div class="card-body">
+                            <h3 class="h5 card-title fw-bold">Despliegue y Respaldo</h3>
+                            <p class="card-text text-secondary">Control total de versiones con Git y almacenamiento remoto en GitHub para trabajo colaborativo entre compañeros de equipo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Componente Bootstrap #2 y #3: List Group + Modal Interactivo -->
+        <div class="row g-4 my-4 align-items-stretch">
+            <div class="col-lg-7">
+                <div class="bg-white p-4 rounded-4 shadow-sm h-100">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h3 class="h4 fw-bold mb-0">Buenas Prácticas en Git + Web</h3>
+                        <span class="badge bg-primary">Componente Bootstrap: List Group</span>
+                    </div>
+                    <ul class="list-group list-group-numbered">
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Rutas relativas en enlaces e imágenes</div>
+                                Usar rutas relativas (ej. <code>img/archivo.png</code>) garantiza que el sitio funcione tanto en GitHub como al descomprimir el ZIP.
+                            </div>
+                            <span class="badge bg-success rounded-pill">Esencial</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Mensajes de commit descriptivos</div>
+                                Redactar mensajes claros en <code>git commit -m "..."</code> explica qué se agregó o corrigió en cada versión.
+                            </div>
+                            <span class="badge bg-info text-dark rounded-pill">Recomendado</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Verificar siempre con git status</div>
+                                Revisar el estado del repositorio antes y después de <code>git add -A</code> evita omitir recursos importantes.
+                            </div>
+                            <span class="badge bg-primary rounded-pill">Flujo Git</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="bg-white p-4 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h3 class="h4 fw-bold mb-0">Ficha del Estudiante</h3>
+                            <span class="badge bg-warning text-dark">Componente Bootstrap: Modal</span>
+                        </div>
+                        <p class="text-secondary">
+                            Haz clic en el siguiente botón interactivo para abrir un componente <strong>Modal de Bootstrap 5</strong> con el resumen de entrega del Laboratorio 6.
+                        </p>
+                    </div>
+                    <div class="d-grid gap-2 mt-3">
+                        <button type="button" class="btn btn-success btn-lg fw-semibold" data-bs-toggle="modal" data-bs-target="#modalResumen">
+                            Ver Resumen de Entrega (Abrir Modal)
+                        </button>
+                        <a href="index.html" class="btn btn-outline-dark">
+                            &larr; Regresar a Inicio (index.html)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ventana Modal de Bootstrap -->
+        <div class="modal fade" id="modalResumen" tabindex="-1" aria-labelledby="modalResumenLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-dark text-white">
+                        <h5 class="modal-title fw-bold" id="modalResumenLabel">Datos de Entrega - Laboratorio 6</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2"><strong>Materia:</strong> Programación Web (Laboratorio)</li>
+                            <li class="mb-2"><strong>Docente:</strong> Ing. Luis Daniel Lepe Rodríguez</li>
+                            <li class="mb-2"><strong>Matrícula:</strong> 2160859</li>
+                            <li class="mb-2"><strong>Grupo:</strong> 207</li>
+                            <li class="mb-2"><strong>Actividad:</strong> Laboratorio #6 - Control de Versiones con Git</li>
+                            <li class="mb-0"><strong>Estado:</strong> Todas las páginas, imágenes y componentes Bootstrap verificados.</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar ventana</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-1 fw-semibold">Laboratorio 6 - Página 3 | Curso de Programación Web - FIME UANL</p>
+            <p class="mb-0 text-secondary small">Matrícula: 2160859 | Grupo: 207 | Docente: Ing. Luis Daniel Lepe Rodríguez</p>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
