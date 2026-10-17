@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 6 - Inicio | Programación Web</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-info" href="index.html">
+                Lab 6: Git &amp; Web
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-semibold" aria-current="page" href="index.html">Inicio (index)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pagina1.html">pagina 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pagina2.html">pagina 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pagina3.html">pagina 3</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal con texto grande e imagen -->
+    <header class="hero-section py-5 text-white">
+        <div class="container py-4">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <span class="badge bg-info text-dark mb-3 px-3 py-2 fs-6">Curso de Programación Web - FIME UANL</span>
+                    <h1 class="display-3 fw-bold mb-3">Control de Versiones con Git y Desarrollo Web</h1>
+                    <p class="lead mb-4">
+                        Bienvenido al portal interactivo del <strong>Laboratorio 6</strong>. Explora a través del menú de navegación cómo funcionan los repositorios locales, el flujo de trabajo en GitHub y el diseño moderno con Bootstrap 5.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="pagina1.html" class="btn btn-info btn-lg fw-semibold px-4">Explorar Página 1</a>
+                        <a href="pagina2.html" class="btn btn-outline-light btn-lg px-4">Ir a Página 2</a>
+                        <a href="pagina3.html" class="btn btn-outline-info btn-lg px-4">Ir a Página 3</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="img/hero_git.png" alt="Control de Versiones Git y GitHub" class="img-fluid rounded-4 shadow-lg border border-info border-opacity-50">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Resumen de secciones -->
+    <main class="container my-5">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">Contenido del Proyecto</h2>
+            <p class="text-muted fs-5">Selecciona cualquiera de las páginas del menú superior o de las tarjetas inferiores.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 card-hover">
+                    <div class="card-body p-4">
+                        <span class="badge bg-success mb-2">Módulo 1</span>
+                        <h3 class="h4 fw-bold">Página 1: Fundamentos de Git</h3>
+                        <p class="text-secondary">Aprende cómo funciona el directorio de trabajo, el área de preparación (Staging Area) y la creación de commits locales.</p>
+                        <a href="pagina1.html" class="btn btn-sm btn-outline-primary mt-2">Visitar pagina 1 &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 card-hover">
+                    <div class="card-body p-4">
+                        <span class="badge bg-primary mb-2">Módulo 2</span>
+                        <h3 class="h4 fw-bold">Página 2: GitHub y Colaboración</h3>
+                        <p class="text-secondary">Conoce la sincronización con servidores remotos mediante <code>git clone</code>, <code>git push</code>, ramas y trabajo colaborativo.</p>
+                        <a href="pagina2.html" class="btn btn-sm btn-outline-primary mt-2">Visitar pagina 2 &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 card-hover">
+                    <div class="card-body p-4">
+                        <span class="badge bg-purple text-white mb-2" style="background-color:#7c3aed;">Módulo 3</span>
+                        <h3 class="h4 fw-bold">Página 3: Maquetación Bootstrap 5</h3>
+                        <p class="text-secondary">Descubre cómo integrar HTML5, CSS3 y componentes interactivos de Bootstrap en proyectos versionados con Git.</p>
+                        <a href="pagina3.html" class="btn btn-sm btn-outline-primary mt-2">Visitar pagina 3 &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-1 fw-semibold">Laboratorio 6 - Curso de Programación Web | FIME UANL</p>
+            <p class="mb-0 text-secondary small">Matrícula: 2160859 | Grupo: 207 | Docente: Ing. Luis Daniel Lepe Rodríguez</p>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
